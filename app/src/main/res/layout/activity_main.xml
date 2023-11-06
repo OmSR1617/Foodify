@@ -323,12 +323,11 @@
                         android:id="@+id/textView11"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Support"
                         android:onClick="supp"
+                        android:text="About Us"
                         android:textAlignment="center"
                         android:textColor="#676767"
-                        android:textSize="12sp"
-                        />
+                        android:textSize="12sp" />
                 </LinearLayout>
 
 

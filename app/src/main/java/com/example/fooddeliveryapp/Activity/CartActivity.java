@@ -82,17 +82,17 @@ public class CartActivity extends AppCompatActivity {
     double delivery;
     double percentTax;
     private void calculateCart() {
-         percentTax = 0.02;
-         delivery = 10;
+         percentTax = 0.1;
+         delivery = 50;
 
         tax = Math.round((managementCart.getTotalFee() * percentTax) * 100.0) / 100.0;
          total = Math.round((managementCart.getTotalFee() + tax + delivery) * 100.0) / 100.0;
          itemTotal = Math.round(managementCart.getTotalFee() * 100.0) / 100.0;
 
-        totalFeeTxt.setText("$" + itemTotal);
-        taxTxt.setText("$" + tax);
-        deliveryTxt.setText("$" + delivery);
-        totalTxt.setText("$" + total);
+        totalFeeTxt.setText("₹" + itemTotal);
+        taxTxt.setText("₹" + tax);
+        deliveryTxt.setText("₹" + delivery);
+        totalTxt.setText("₹" + total);
 
     }
 

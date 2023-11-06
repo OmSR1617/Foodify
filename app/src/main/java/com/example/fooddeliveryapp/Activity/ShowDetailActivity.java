@@ -67,13 +67,13 @@ public class ShowDetailActivity extends AppCompatActivity {
                 .into(picFood);
 
         titleTxt.setText(object.getTitle());
-        feeTxt.setText("$"+object.getFee());
+        feeTxt.setText("₹"+object.getFee());
         descriptionTxt.setText(object.getDescription());
         numberOrderTxt.setText(String.valueOf(numberOrder));
         caloryTxt.setText(object.getCalories()+" Calories");
         starTxt.setText(object.getStar()+"");
         timeTxt.setText(object.getTime()+" minutes");
-        totalPriceTxt.setText("$"+numberOrder*object.getFee());
+        totalPriceTxt.setText("₹"+numberOrder*object.getFee());
 
 
         plusBtn.setOnClickListener(new View.OnClickListener() {
@@ -81,7 +81,7 @@ public class ShowDetailActivity extends AppCompatActivity {
             public void onClick(View view) {
                 numberOrder = numberOrder+1;
                 numberOrderTxt.setText(String.valueOf(numberOrder));
-                totalPriceTxt.setText("$"+numberOrder*object.getFee());
+                totalPriceTxt.setText("₹"+numberOrder*object.getFee());
             }
         });
 
@@ -92,7 +92,7 @@ public class ShowDetailActivity extends AppCompatActivity {
                     numberOrder = numberOrder - 1;
                 }
                 numberOrderTxt.setText(String.valueOf(numberOrder));
-                totalPriceTxt.setText("$"+numberOrder*object.getFee());
+                totalPriceTxt.setText("₹"+numberOrder*object.getFee());
             }
         });
 
@@ -106,7 +106,7 @@ public class ShowDetailActivity extends AppCompatActivity {
 
                 Map<String,Object> note = new HashMap<>();
                 note.put("Food name",object.getTitle());
-                note.put("Price","$"+numberOrder*object.getFee());
+                note.put("Price","₹"+numberOrder*object.getFee());
 
 
                 documentReference.set(note).addOnSuccessListener(new OnSuccessListener<Void>() {
